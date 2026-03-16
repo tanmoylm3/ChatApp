@@ -4,6 +4,8 @@ import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.List;
+
 
 // Model class for the business details
 @Getter
@@ -14,18 +16,11 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(collection = "users")
 public class User {
 
-	// Id for user 
 	@Id
-	private String userid;
-	// Password for user
-	private String upassword;
-	/**
-	 *Name for user 
-	 */
 	private String uname;
 	// Generated authentication token for the user
 	private String authToken;
-	private String roomId;
+	private List<String> roomId;
 	
 	
 	
